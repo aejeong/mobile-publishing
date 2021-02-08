@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mobile</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Serif+KR&family=Public+Sans:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -14,10 +16,171 @@
     <div class="search">
         <div class="search-container clear">
             <div class="search-bar">
-                <input type="search">
+                <input type="search" placeholder="Search">
             </div>
             <span><i class="fas fa-align-right"></i></span>
         </div>
     </div>
+    <div class="cards">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card-container">
+                        <div class="card">
+                            <img src="./images/cover/blackpink.jpeg" alt="album-cover">
+                        </div>
+                        <div class="card-desc">
+                            <p>SQUARE UP</p>
+                            <div class="buttons-container">
+                                <div class="buttons">
+                                    <button>
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <span>332</span>
+                                </div>
+                                <div class="buttons">
+                                    <button>
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                    <span>56</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card-container">
+                        <div class="card">
+                            <img src="./images/cover/jannabi.jpeg" alt="album-cover">
+                        </div>
+                        <div class="card-desc">
+                            <p>전설</p>
+                            <div class="buttons-container">
+                                <div class="buttons">
+                                    <button>
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <span>445</span>
+                                </div>
+                                <div class="buttons">
+                                    <button>
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                    <span>33</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card-container">
+                        <div class="card">
+                            <img src="./images/cover/leehi.jpg" alt="album-cover">
+                        </div>
+                        <div class="card-desc">
+                            <p>SEOULITE</p>
+                            <div class="buttons-container">
+                                <div class="buttons">
+                                    <button>
+                                        <i class="fas fa-heart"></i>
+                                    </button>
+                                    <span>573</span>
+                                </div>
+                                <div class="buttons">
+                                    <button>
+                                        <i class="far fa-share-square"></i>
+                                    </button>
+                                    <span>99</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="trends">
+        <ul class="trend-nav">
+            <li href="#" class="on">트렌드</li>
+            <li href="#">최신음악</li>
+            <li href="#">주간 베스트</li>
+            <li href="#">이달의 음악</li>
+        </ul>
+        <div class="trend-section">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="container">
+                                <div class="trend">
+                                    <img src="./images/cover/jangbeomjoon.jpg" alt="album-cover">
+                                </div>
+                                <div class="trend-desc">
+                                    <p>잠이 오질 않네요</p>
+                                    <span>장범준</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container">
+                                <div class="trend">
+                                    <img src="./images/cover/downtown.jpg" alt="album-cover">
+                                </div>
+                                <div class="trend-desc">
+                                    <p>Downtown Baby</p>
+                                    <span>블루(BLOO)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container">
+                                <div class="trend">
+                                    <img src="./images/cover/kyungseo.jpg" alt="album-cover">
+                                </div>
+                                <div class="trend-desc">
+                                    <p>밤하늘의 별을</p>
+                                    <span>경서</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container">
+                                <div class="trend">
+                                    <img src="./images/cover/ohmygirl.jpg" alt="album-cover">
+                                </div>
+                                <div class="trend-desc">
+                                    <p>Dolphin</p>
+                                    <span>오마이걸</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="discover">
+        <span>Discover</span>
+        <div class="playlists">
+            <span>Your playlists</span>
+            <div class="list"></div>
+            <div class="list"></div>
+            <div class="list"></div>
+        </div>
+        <div class="my">
+            <div class="my-nav">
+                <a href="#">Like</a>
+                <a href="#">Recent</a>
+            </div>
+            <ul>
+                <li>
+                    <p></p>
+                    <span></span>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="./index.js"></script>
 </html>
