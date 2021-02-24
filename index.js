@@ -2,30 +2,33 @@
     initialSwiper();
     trendClickEvent();
     playListClickEvent();
+    searchClickEvent();
+    navigationScrollEvent();
+    buttonCloseEvent();
+    openMenu();
 })();
 
 function initialSwiper(){
     var cardsSwiper = new Swiper('.cards > .swiper-container', {
-        // parallax:true,
-        initialSlide: 0,
-        loop: false,
-        slidesPerView:1.5,
-        spaceBetween:30,
-        slidesOffsetBefore:30,
-        slidesOffsetAfter:30,
+        initialSlide: 1,
+        loop: true,
+        slidesPerView:'auto',
+        spaceBetween:15,
+        centeredSlides:true,
+        // slidesOffsetBefore:30,
+        // slidesOffsetAfter:30,
         pagination: {
         el: '.swiper-pagination'
     },
     });
 
     var trendSwiper = new Swiper('.trend-area > .swiper-container', {
-        // parallax:true,
         slidesOffsetBefore:20,
         slidesOffsetAfter:20,
         initialSlide: 0,
         loop: false,
         spaceBetween:20,
-        slidesPerView:2.5,
+        slidesPerView:'auto',
     });
 
     var newReleaseSwiper = new Swiper('.new-release > .swiper-container', {
@@ -34,7 +37,7 @@ function initialSwiper(){
         initialSlide: 0,
         loop: false,
         spaceBetween:20,
-        slidesPerView:2.5,
+        slidesPerView:'auto',
     });
 
     var weeklySwiper = new Swiper('.weekly > .swiper-container', {
@@ -43,7 +46,8 @@ function initialSwiper(){
         initialSlide: 0,
         loop: false,
         spaceBetween:20,
-        slidesPerView:2.5,
+        slidesPerView:'auto',
+
     });
 
     var monthlySwiper = new Swiper('.monthly > .swiper-container', {
@@ -52,16 +56,31 @@ function initialSwiper(){
         initialSlide: 0,
         loop: false,
         spaceBetween:20,
-        slidesPerView:2.5,
+        slidesPerView:'auto',
+
     });
 
     var playListSwiper = new Swiper('.swiper-container.playlist', {
-        slidesOffsetBefore:20,
-        slidesOffsetAfter:20,
-        initialSlide: 0,
-        loop: false,
-        spaceBetween:20,
-        slidesPerView:1.5,
+        spaceBetween:15,
+        slidesPerView:'auto',
+    });
+
+    var recommSwiper = new Swiper('.recomm-wrap01 .swiper-container', {
+        slidesPerView:'auto',
+        spaceBetween:10,
+
+    });
+
+    
+    var artistSwiper = new Swiper('.recomm-artist .swiper-container', {
+        slidesPerView:'auto',
+        spaceBetween:10,
+    });
+
+    var cateSwiper = new Swiper('.recomm-cate .swiper-container', {
+        slidesPerView:'auto',
+        spaceBetween:10,
+        slidesPerColumn:2
     });
 }
 
@@ -100,5 +119,55 @@ function playListClickEvent(){
         }
         lists[idx].classList.add('active');
 
+    })
+}
+
+function searchClickEvent(){
+    var searchIcon = document.querySelector('.search-icon')
+    var searchInput = document.querySelector('.search-txt');
+    var search = document.querySelector('.search');
+    console.dir(search,'---search')
+    searchIcon.addEventListener('click',function(e){
+        search.classList.add('on')
+    })
+}
+
+function navigationScrollEvent(){
+    var navigation = document.querySelector('.navigation');
+    var isScrolling;
+    window.addEventListener('scroll',function(e){
+        clearTimeout(isScrolling);
+        isScrolling = setTimeout(function(){
+            navigation.classList.remove('translate')
+        },250);
+        if(scrollY > 0){
+            navigation.classList.add('translate')
+        }
+    })
+}
+
+function menuButtonClickEvent(){
+    var menu = document.querySelector('.menu-btn');
+    menu.addEventListener('click',function(e){
+
+    })
+}
+
+function buttonCloseEvent(){
+    var close = document.querySelector('.close')
+    var search = document.querySelector('.search');
+    close.addEventListener('click',function(){
+        search.classList.remove('on');
+    })
+}
+
+function openMenu() {
+    var menuBtn = document.querySelector('.menu-btn');
+    var navigation = document.querySelector('.navigation');
+    var menu = document.querySelector('.menu')
+    menuBtn.addEventListener('click',function(){
+        menu.classList.toggle('on');
+        navigation.classList.toggle('none');
+        menuBtn.classList.toggle('on');
     })
 }
