@@ -6,6 +6,7 @@
     navigationScrollEvent();
     buttonCloseEvent();
     openMenu();
+    changeTheme();
 })();
 
 function initialSwiper(){
@@ -169,5 +170,12 @@ function openMenu() {
         menu.classList.toggle('on');
         navigation.classList.toggle('none');
         menuBtn.classList.toggle('on');
+    })
+}
+
+function changeTheme() {
+    var themeBtn = document.querySelector('.th-fix');
+    themeBtn.addEventListener('click',function(){
+        document.body.classList.toggle('on');
     })
 }
